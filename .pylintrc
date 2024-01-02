@@ -1,0 +1,8 @@
+[MESSAGES CONTROL]
+
+disable=
+  R0903, # too-few-public-methods
+  R0902, # too-many-instance-attributes
+  W0511, # TODO fixme
+  C0301, # line-too-long
+  W0212, # protected-access
