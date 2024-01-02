@@ -1,5 +1,8 @@
 name: PyPi Publish
 on:
+  push:
+    tags:
+      - v*
   release:
     types:
       - created
