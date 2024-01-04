@@ -118,8 +118,8 @@ class AuthClient:
             "client_id": self.client_id,
             "redirect_uri": self.redirect_uri,
             "scope": " ".join(scopes) if scopes else "",
-            "access_type": access_type,
-            "approval_prompt": approval_prompt,
+            "access_type": access_type.lower(),
+            "approval_prompt": approval_prompt.lower(),
             "state": state,
         }
 
