@@ -2,10 +2,11 @@
 
 import datetime
 from dataclasses import dataclass, field
-from enum import StrEnum, auto
+from enum import auto
 from urllib.parse import urlencode, urljoin
 
 import requests  # type: ignore
+from strenum import StrEnum
 
 # ref https://musicbrainz.org/doc/Development/OAuth2
 
