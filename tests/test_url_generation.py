@@ -14,3 +14,5 @@ def test_generate_authorization_url():
         state="state",
     )
     assert authorization_url.startswith(OAUTH_ENDPOINT)
+    assert "scope=profile+email" in authorization_url
+    assert "state=state" in authorization_url

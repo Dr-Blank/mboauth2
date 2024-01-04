@@ -2,11 +2,10 @@
 
 import datetime
 from dataclasses import dataclass, field
-from enum import auto
+from enum import Enum
 from urllib.parse import urlencode, urljoin
 
 import requests  # type: ignore
-from strenum import StrEnum
 
 # ref https://musicbrainz.org/doc/Development/OAuth2
 
@@ -14,48 +13,48 @@ OAUTH_ENDPOINT = "https://musicbrainz.org/oauth2/authorize"
 OAUTH_TOKEN_ENDPOINT = "https://musicbrainz.org/oauth2/token"
 
 
-class Scope(StrEnum):
+class Scope(str, Enum):
     """Scopes for the MusicBrainz OAuth2 API."""
 
-    PROFILE = auto()
+    PROFILE = "profile"
     """ View the user's public profile information """
-    EMAIL = auto()
+    EMAIL = "email"
     """ View the user's email. """
-    TAG = auto()
+    TAG = "tag"
     """ View and modify the user's private tags. """
-    RATING = auto()
+    RATING = "rating"
     """ View and modify the user's private ratings. """
-    COLLECTION = auto()
+    COLLECTION = "collection"
     """ View and modify the user's private collections. """
-    SUBMIT_ISRC = auto()
+    SUBMIT_ISRC = "submit_isrc"
     """ Submit new ISRCs to the database. """
-    SUBMIT_BARCODE = auto()
+    SUBMIT_BARCODE = "submit_barcode"
     """ Submit barcodes to the database. """
 
 
-class AccessType(StrEnum):
+class AccessType(str, Enum):
     """Access types for the MusicBrainz OAuth2 API."""
 
-    ONLINE = auto()
+    ONLINE = "online"
     """ Access when the user is present at the browser. """
-    OFFLINE = auto()
+    OFFLINE = "offline"
     """ Access when the user is not present at the browser. """
 
 
-class ApprovalPrompt(StrEnum):
+class ApprovalPrompt(str, Enum):
     """Approval prompts for the MusicBrainz OAuth2 API."""
 
-    AUTO = auto()
+    AUTO = "auto"
     """ The user should only be prompted for consent the first time through the sequence. """  # noqa: E501
-    FORCE = auto()
+    FORCE = "force"
     """ The user should be prompted for consent every time. """
 
 
-class GrantType(StrEnum):
+class GrantType(str, Enum):
     """Grant types for the MusicBrainz OAuth2 API."""
 
-    AUTHORIZATION_CODE = auto()
-    REFRESH_TOKEN = auto()
+    AUTHORIZATION_CODE = "authorization_code"
+    REFRESH_TOKEN = "refresh_token"
 
 
 @dataclass

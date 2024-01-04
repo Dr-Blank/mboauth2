@@ -2093,23 +2093,6 @@ pure-eval = "*"
 tests = ["cython", "littleutils", "pygments", "pytest", "typeguard"]
 
 [[package]]
-name = "strenum"
-version = "0.4.15"
-description = "An Enum that inherits from str."
-category = "main"
-optional = false
-python-versions = "*"
-files = [
-    {file = "StrEnum-0.4.15-py3-none-any.whl", hash = "sha256:a30cda4af7cc6b5bf52c8055bc4bf4b2b6b14a93b574626da33df53cf7740659"},
-    {file = "StrEnum-0.4.15.tar.gz", hash = "sha256:878fb5ab705442070e4dd1929bb5e2249511c0bcf2b0eeacf3bcd80875c82eff"},
-]
-
-[package.extras]
-docs = ["myst-parser[linkify]", "sphinx", "sphinx-rtd-theme"]
-release = ["twine"]
-test = ["pylint", "pytest", "pytest-black", "pytest-cov", "pytest-pylint"]
-
-[[package]]
 name = "tinycss2"
 version = "1.2.1"
 description = "A tiny CSS parser"
@@ -2374,4 +2357,4 @@ files = [
 [metadata]
 lock-version = "2.0"
 python-versions = "^3.10"
-content-hash = "2a36877a3464732c485e7d688b51dbb00668383e2a5bd4ebeb3fbabfb423b289"
+content-hash = "6ab46ad258f0950fe3a2954ecc7f0eb0986dbefd6b67dd9c34cd82c9bcb6d7e9"
